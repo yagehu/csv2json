@@ -1,0 +1,11 @@
+version: "3.9"
+services:
+  postgres:
+    image: postgres:14-alpine
+    ports:
+      - 5432:5432
+    environment:
+      POSTGRES_PORT: ${C2J_DEV_POSTGRES_PORT}
+      POSTGRES_USER: ${C2J_DEV_POSTGRES_USER}
+      POSTGRES_PASSWORD: ${C2J_DEV_POSTGRES_PASSWORD}
+      POSTGRES_DB: ${C2J_DEV_POSTGRES_DATABASE}
